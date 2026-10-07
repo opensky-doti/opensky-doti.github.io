@@ -1,0 +1,69 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+  color: #172d38;
+  background: #fff;
+  line-height: 1.7;
+  --blue: #005575;
+  --muted: #52656e;
+  --line: #dce5e9;
+}
+* { box-sizing: border-box; }
+body { margin: 0; word-break: keep-all; overflow-wrap: anywhere; }
+a { color: var(--blue); text-underline-offset: .25em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid #ae480a; outline-offset: 5px; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { line-height: 1.3; letter-spacing: -.045em; }
+h1 { font-size: clamp(2.6rem, 5.7vw, 4.75rem); margin-bottom: 1.5rem; font-weight: 750; }
+h2 { font-size: clamp(1.75rem, 3vw, 2.6rem); margin-bottom: 1.25rem; }
+h3 { font-size: 1.5rem; margin-bottom: .75rem; }
+p { margin-bottom: 1.25rem; }
+.wrap { width: min(1120px, calc(100% - 3rem)); margin-inline: auto; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
+.wordmark { text-decoration: none; color: #172d38; font-size: 1.25rem; font-weight: 750; letter-spacing: -.04em; }
+.wordmark span { color: var(--blue); font-weight: 500; }
+nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+nav a { text-decoration: none; padding-block: .5rem; font-weight: 600; }
+nav a[aria-current] { text-decoration: underline; }
+.skip-link { position: absolute; left: 1rem; top: -10rem; background: #fff; padding: 1rem; z-index: 10; }
+.skip-link:focus { top: 1rem; }
+.hero { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.eyebrow { font-size: .9rem; font-weight: 700; letter-spacing: .04em; color: var(--blue); margin-bottom: 1.25rem; }
+.lead { font-size: clamp(1.125rem, 2vw, 1.4rem); color: var(--muted); max-width: 42rem; margin-bottom: 2rem; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 1rem; max-width: 100%; background: var(--blue); color: white; text-decoration: none; padding: .95rem 1.4rem; border-radius: 6px; font-weight: 650; text-align: center; min-height: 48px; }
+.button:hover { background: #003e56; }
+.button span { flex-shrink: 0; }
+.text-link { font-weight: 650; padding-block: .75rem; }
+.app-section { background: #eff6f9; padding-block: clamp(3rem, 6vw, 5rem); }
+.app-layout { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr); gap: clamp(2rem, 7vw, 6rem); align-items: center; }
+.app-icon { border-radius: 22%; width: 240px; }
+.body-large { color: var(--muted); font-size: 1.15rem; }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem 1.5rem; }
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2rem; padding-block: 4rem; }
+.contact p:not(.eyebrow) { color: var(--muted); }
+.email-link { font-weight: 650; font-size: 1.1rem; }
+.site-footer { padding-block: 1.75rem; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: .75rem 2rem; justify-content: space-between; font-size: .9rem; }
+.site-footer p { margin: 0; color: var(--muted); }
+.detail-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 240px); gap: 3rem; align-items: center; }
+.platform-note { font-size: .9rem; color: var(--muted); margin-top: 1rem; margin-bottom: 0; }
+.features { padding-bottom: 4rem; }
+.feature-list { list-style: none; padding: 0; margin: 2rem 0 0; }
+.feature-list li { border-top: 1px solid var(--line); padding-block: 2rem; display: grid; grid-template-columns: 4rem minmax(0, 1fr); gap: 1.5rem; }
+.feature-list p { color: var(--muted); max-width: 46rem; margin: 0; font-size: 1.1rem; }
+.step-number { color: var(--blue); font-size: 1.7rem; font-weight: 650; line-height: 1.3; }
+.support-section { background: #eff6f9; }
+.privacy-note { margin-top: 1rem; margin-bottom: 0; font-size: .9rem; }
+@media (max-width: 700px) {
+  .wrap { width: calc(100% - 2.5rem); }
+  .site-header { padding-block: 1rem; }
+  nav { gap: 1rem; }
+  .app-layout, .detail-hero, .contact { grid-template-columns: minmax(0, 1fr); }
+  .app-icon { width: 112px; }
+  .detail-icon { grid-row: 1; width: 88px; }
+  .detail-hero { gap: 1.75rem; }
+  .contact { padding-block: 3rem; gap: 1rem; }
+  .feature-list li { grid-template-columns: 2.5rem minmax(0, 1fr); gap: .75rem; }
+  .desktop-break { display: none; }
+}
