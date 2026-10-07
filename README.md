@@ -75,6 +75,7 @@ google.com, pub-3081928577042149, DIRECT, f08c47fec0942fa0
 ## 문제 확인과 복구
 
 - 사이트 전체 404: Pages 소스 설정과 최신 Actions 결과부터 확인한다.
+- 홈에 README가 보이고 `/app-ads.txt`가 404: 브랜치 기반 기본 배포가 `site/` 전용 배포를 덮어썼는지 확인한다. **Settings → Pages → Source → GitHub Actions**로 바꾼 뒤 **Validate and deploy Doti Pages**를 다시 실행한다. 액션 성공 표시만 보지 말고 공개 홈과 인증 파일까지 다시 확인한다.
 - 파일은 있으나 게시자 불일치: AdMob 계정에서 제공한 코드와 공개 응답을 대조한다. 다른 앱의 판매자 정보를 임의로 지우지 않는다.
 - 오래된 내용: Actions에서 배포한 커밋과 최신 main을 비교한다. 재빌드 대신 실패 원인을 먼저 확인한다.
 - 배포 후 문제가 생김: `git log --oneline`으로 원인 커밋을 식별하고 `git revert <원인커밋>`을 검토·실행한다. 테스트 후 main에 푸시해 재배포한다. 강제 푸시나 기존 기록 삭제로 복구하지 않는다.
