@@ -74,4 +74,4 @@ README에는 로컬 확인, 파일 수정, 배포, 공개 URL 점검, 이전 정
 - [GitHub Pages 주소 구조](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages)
 - [Google AdMob app-ads.txt 설정](https://support.google.com/admob/answer/9363762?hl=ko)
 
-설계 작성일은 2026년 10월 7일이다. 대화에서 승인한 구성에 대한 문서이며, 구현 전 사용자 검토 단계다.
+설계 작성일은 2026년 10월 7일이다. 사용자가 작성된 설계를 승인했으며, 구현 계획 검토 후 실행한다.
