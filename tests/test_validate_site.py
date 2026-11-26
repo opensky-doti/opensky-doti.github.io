@@ -22,8 +22,8 @@ class SiteValidationTests(unittest.TestCase):
         <meta name="description" content="오픈스카이 앱 안내">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/assets/styles.css"></head><body>
-        <main id="main"><h1>도티두잇</h1>
-        <a href="/">홈</a><a href="/dotidoit/">도티두잇</a>
+        <main id="main"><h1>모티두잇</h1>
+        <a href="/">홈</a><a href="/dotidoit/">모티두잇</a>
         <a href="https://play.google.com/store/apps/details?id=com.doti.doit">다운로드</a>
         <a href="https://kizwond.github.io/dotimoti-legal/dotidoit/privacy/">개인정보처리방침</a>
         <a href="mailto:eonseok.yoon@opensky.co.kr">문의</a></main></body></html>'''
@@ -78,7 +78,7 @@ class SiteValidationTests(unittest.TestCase):
 
     def test_missing_title_or_metadata(self):
         for old in ('<title>도티 안내</title>', '<meta name="description" content="오픈스카이 앱 안내">',
-                    '<meta name="viewport" content="width=device-width, initial-scale=1">', 'lang="ko"', '<h1>도티두잇</h1>'):
+                    '<meta name="viewport" content="width=device-width, initial-scale=1">', 'lang="ko"', '<h1>모티두잇</h1>'):
             with self.subTest(old=old):
                 self.write('index.html', self.html.replace(old, ''))
                 self.assertTrue(self.validate())
